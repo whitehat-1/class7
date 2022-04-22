@@ -5,9 +5,6 @@ from typing import Optional
 app = FastAPI()
 
 
-@app.get("/items/")
-async def items():
-    return{ "message": "hello world"}
 
 @app.post("/files/")
 async def create_file(file: bytes = File(...)):
